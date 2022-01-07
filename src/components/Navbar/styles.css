@@ -1,0 +1,150 @@
+/*========== NAV ==========*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--first-color);
+    transition: 0.4s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
+  }
+}
+
+.nav__item {
+  margin: var(--mb-2);
+}
+
+.nav__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list__icons {
+  display: flex;
+}
+
+.nav__logo img {
+  width: 10rem;
+}
+
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  font-size: var(--h3-font-size);
+  color: var(--white-color);
+}
+
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  top: var(--header-height);
+}
+
+#cart {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: var(--small-font-size);
+  text-align: center;
+  border-radius: 0.5rem;
+  background: var(--red-dark);
+  color: var(--white-color);
+}
+
+#user {
+  position: relative;
+}
+
+#user:hover .dropdown-user {
+  display: block;
+}
+
+.dropdown-user {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: -5rem;
+  width: 10rem;
+  padding: 0.2rem;
+  background: var(--white-color);
+  font-size: var(--small-font-size);
+  transform-origin: 50% top;
+  animation: dropdownGrowth ease-in 0.3s;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+@keyframes dropdownGrowth {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dropdown-user::before {
+  content: '';
+  position: absolute;
+  top: -1.8rem;
+  right: 2.8rem;
+  border-style: solid;
+  border-width: 15px 25px;
+  border-color: transparent transparent var(--white-color) transparent;
+  border-radius: 2px;
+  z-index: 100;
+}
+
+.dropdown-user li > a {
+  display: block;
+  padding: 0.5rem;
+}
+
+.dropdown-user li > a:hover {
+  background: var(--first-color);
+  color: var(--white-color);
+}
+
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 960px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+}

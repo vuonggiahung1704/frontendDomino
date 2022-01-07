@@ -1,0 +1,31 @@
+.pagination {
+  padding: 1rem 0;
+  display: flex;
+  margin: auto;
+  list-style-type: none;
+}
+
+.pagination-item {
+  min-width: 2rem;
+  height: 2rem;
+  margin: 0.1rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.pagination-item.disable,
+.pagination-item.dots {
+  pointer-events: none;
+}
+
+.pagination-item:hover {
+  box-shadow: 0 2px 7px rgb(0, 0, 0, 0.1);
+}
+
+.pagination-item.active {
+  color: var(--white-color);
+  background-color: var(--first-color-alt);
+}

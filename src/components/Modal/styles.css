@@ -1,0 +1,152 @@
+/* MODAL */
+.modal-container {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 4;
+}
+
+.modal {
+  position: relative;
+  margin-top: 3rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  background: var(--white-color);
+  overflow: hidden;
+}
+
+.modal .modal__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  background: var(--red);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal .modal__data {
+  width: 100%;
+}
+
+.modal .modal__img {
+  width: 100%;
+  height: 15rem;
+}
+
+.modal .modal__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal .modal__info a {
+  color: var(--first-color-alt);
+  font-size: var(--normal-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.modal .modal__info .price__sale {
+  text-decoration: line-through;
+  color: var(--text-color);
+}
+
+.modal .modal__info p {
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+.modal .modal__button {
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0px 0px 16px rgb(0 42 61 / 16%);
+  border-radius: 0.5rem;
+}
+
+.group__button {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border: 1px solid var(--grey-border);
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.group__button button {
+  outline: none;
+  border: none;
+}
+
+.form__amount,
+.btn__amount {
+  background: var(--grey-btn);
+  color: var(--black-color);
+  width: 100%;
+}
+
+.form__amount {
+  border-left: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+}
+
+.btn__amount:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn__red {
+  background: var(--red) !important;
+}
+
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px) {
+  .modal {
+    width: 60%;
+  }
+  .modal .modal__img {
+    height: 25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 70%;
+  }
+  .modal .modal__img {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .modal {
+    width: 40%;
+  }
+  .modal .modal__img {
+    height: 24rem;
+  }
+}

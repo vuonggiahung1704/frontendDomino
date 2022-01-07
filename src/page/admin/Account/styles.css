@@ -1,0 +1,32 @@
+/* .order__page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+}
+
+.order__page .header {
+  display: flex;
+  font-weight: 500;
+  font-size: var(--normal-font-size);
+}
+
+.order__page .header a {
+  padding: 0 0.5rem;
+  color: var(--first-color-alt);
+}
+
+.order__page .header span {
+  padding-left: 0.5rem;
+}
+
+.order__page .table {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.order__page .end {
+  display: flex;
+} */

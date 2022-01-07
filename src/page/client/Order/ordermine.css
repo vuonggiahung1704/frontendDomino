@@ -1,0 +1,60 @@
+.my__order .header {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-alt);
+}
+
+.table {
+  min-height: 20rem;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+table thead td {
+  font-weight: 600;
+  color: var(--first-color-alt);
+  pointer-events: none;
+}
+table tr {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+table tr:last-child {
+  border-bottom: none;
+}
+
+table tr td.td__price {
+  text-align: end;
+}
+
+table tr td.td__description {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table tr td {
+  padding: 1rem;
+}
+
+table tr td .view__icon {
+  color: var(--first-color-alt);
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+}
+
+.red__icon {
+  color: var(--red) !important;
+}
+
+.green__text {
+  color: #20a20a;
+}
+
+.warning__text {
+  color: #f08000;
+}

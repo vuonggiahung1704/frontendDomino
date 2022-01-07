@@ -1,0 +1,53 @@
+.service {
+  text-align: center;
+}
+
+.service__header {
+  border-bottom: 1px solid var(--grey-border);
+}
+
+.service__header span {
+  position: relative;
+  color: var(--red);
+}
+
+.service__header span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-bottom: 3px solid var(--red);
+}
+
+.service__main {
+  padding: 1.5rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.service__main .description span {
+  color: var(--blue-text);
+  display: block;
+}
+
+.service__main .image {
+  width: 100%;
+  height: 100%;
+}
+
+.service__main .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .service__main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image.order {
+    order: -1;
+  }
+}

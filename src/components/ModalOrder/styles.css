@@ -1,0 +1,29 @@
+/* MODAL */
+.max-width {
+  width: 95% !important;
+  padding: 0.5rem !important;
+}
+
+.m-t {
+  margin: 1rem 0 !important;
+}
+
+.status {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid var(--grey-border);
+  text-transform: capitalize;
+}
+
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px) {
+  .max-width {
+    width: 80% !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .max-width {
+    width: 60% !important;
+  }
+}

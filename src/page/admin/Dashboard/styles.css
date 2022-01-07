@@ -1,0 +1,84 @@
+.card__box {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.card__box .card {
+  position: relative;
+  padding: 30px;
+  box-shadow: 0 7px 25px rgb(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card__box .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--first-color-alt);
+}
+.card__box .card .cardName {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.card__box .card .iconBx {
+  font-size: 3.5rem;
+  color: var(--text-color-light);
+}
+
+.card__box .card:hover {
+  background: var(--first-color-alt);
+  color: var(--white-color);
+  transform: scale(1.01);
+  box-shadow: 0 7px 25px rgb(0, 0, 0, 0.3);
+}
+
+.card__box .card:hover .numbers,
+.card__box .card:hover .cardName,
+.card__box .card:hover .iconBx {
+  color: var(--white-color) !important;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.doughnutChart {
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (min-width: 560px) {
+  .card__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__box {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .doughnutChart {
+    margin: auto;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .doughnutChart {
+    margin: auto;
+    width: 50%;
+  }
+}
